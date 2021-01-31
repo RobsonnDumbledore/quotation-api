@@ -10,6 +10,15 @@ public abstract class Company {
     private String name;
     private String cnpj;
 
+    public Company() {
+    }
+
+    public Company(Long id, String name, String cnpj) {
+        this.id = id;
+        this.name = name;
+        this.cnpj = cnpj;
+    }
+
     public Long getId() {
         return id;
     }
