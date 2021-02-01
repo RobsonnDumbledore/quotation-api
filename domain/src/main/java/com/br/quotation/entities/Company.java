@@ -5,18 +5,20 @@ package com.br.quotation.entities;
  * @author Robson
  */
 public abstract class Company {
-    
+
     private Long id;
     private String name;
     private String cnpj;
+    private Boolean active;
 
     public Company() {
     }
 
-    public Company(Long id, String name, String cnpj) {
+    public Company(Long id, String name, String cnpj, Boolean active) {
         this.id = id;
         this.name = name;
         this.cnpj = cnpj;
+        this.active = active;
     }
 
     public Long getId() {
@@ -42,5 +44,13 @@ public abstract class Company {
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-    
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
 }

@@ -9,8 +9,8 @@ public class Provider extends Company {
     public Provider() {
     }
 
-    public Provider(Long id, String name, String cnpj) {
-        super(id, name, cnpj);
+    public Provider(Long id, String name, String cnpj, Boolean active) {
+        super(id, name, cnpj, active);
     }
 
 }
