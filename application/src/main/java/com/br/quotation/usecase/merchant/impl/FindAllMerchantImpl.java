@@ -1,4 +1,4 @@
-package com.br.quotation.usecase.impl;
+package com.br.quotation.usecase.merchant.impl;
 
 import javax.inject.Named;
 import javax.inject.Inject;
@@ -6,7 +6,7 @@ import com.br.quotation.utilities.Page;
 import com.br.quotation.entities.Merchant;
 import com.br.quotation.utilities.PageRequest;
 import com.br.quotation.utilities.PageResponse;
-import com.br.quotation.usecase.FindAllMerchant;
+import com.br.quotation.usecase.merchant.FindAllMerchant;
 import com.br.quotation.repositories.MerchantRepository;
 
 /**

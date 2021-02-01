@@ -1,9 +1,9 @@
-package com.br.quotation.usecase.impl;
+package com.br.quotation.usecase.merchant.impl;
 
 import javax.inject.Named;
 import javax.inject.Inject;
 import com.br.quotation.entities.Merchant;
-import com.br.quotation.usecase.UpdateMerchant;
+import com.br.quotation.usecase.merchant.UpdateMerchant;
 import com.br.quotation.repositories.MerchantRepository;
 
 /**

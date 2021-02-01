@@ -1,10 +1,10 @@
-package com.br.quotation.usecase.impl;
+package com.br.quotation.usecase.merchant.impl;
 
 import javax.inject.Named;
 import java.util.Optional;
 import javax.inject.Inject;
 import com.br.quotation.entities.Merchant;
-import com.br.quotation.usecase.FindMerchant;
+import com.br.quotation.usecase.merchant.FindMerchant;
 import com.br.quotation.repositories.MerchantRepository;
 
 /**
