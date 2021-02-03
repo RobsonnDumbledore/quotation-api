@@ -22,8 +22,8 @@ public class FindMerchantImpl implements FindMerchant {
     }
 
     @Override
-    public Optional<Merchant> execute(Merchant merchant) {
-        return repository.find(merchant.getId());
+    public Optional<Merchant> execute(Long id) {
+        return repository.find(id);
     }
 
 }

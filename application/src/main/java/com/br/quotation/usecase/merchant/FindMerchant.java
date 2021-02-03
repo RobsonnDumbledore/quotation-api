@@ -9,6 +9,6 @@ import java.util.Optional;
  */
 public interface FindMerchant {
 
-    Optional<Merchant> execute(Merchant merchant);
+    Optional<Merchant> execute(Long id);
 
 }
