@@ -9,6 +9,6 @@ import com.br.quotation.entities.Provider;
  */
 public interface FindProvider {
 
-    Optional<Provider> execute(Provider provider);
+    Optional<Provider> execute(Long id);
 
 }

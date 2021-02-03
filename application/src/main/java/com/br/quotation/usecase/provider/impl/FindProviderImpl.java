@@ -22,8 +22,8 @@ public class FindProviderImpl implements FindProvider {
     }
 
     @Override
-    public Optional<Provider> execute(Provider provider) {
-        return repository.find(provider.getId());
+    public Optional<Provider> execute(Long id) {
+        return repository.find(id);
     }
 
 }
