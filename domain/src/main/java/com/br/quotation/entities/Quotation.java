@@ -1,5 +1,7 @@
 package com.br.quotation.entities;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Robson
@@ -11,16 +13,23 @@ public class Quotation {
     private Product product;
     private Merchant merchant;
     private Provider provider;
+    private LocalDate deadline;
+    private QuotationStatus status;
 
     public Quotation() {
     }
 
-    public Quotation(Long id, Double price, Product product, Merchant merchant, Provider provider) {
+    public Quotation(Long id, Double price, LocalDate deadline,
+            QuotationStatus status, Product product,
+            Merchant merchant, Provider provider) {
+
         this.id = id;
         this.price = price;
+        this.status = status;
         this.product = product;
         this.merchant = merchant;
         this.provider = provider;
+        this.deadline = deadline;
     }
 
     public Long getId() {
@@ -37,6 +46,22 @@ public class Quotation {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public QuotationStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(QuotationStatus status) {
+        this.status = status;
+    }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
     }
 
     public Product getProduct() {
