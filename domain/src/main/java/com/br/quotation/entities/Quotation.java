@@ -19,17 +19,17 @@ public class Quotation {
     public Quotation() {
     }
 
-    public Quotation(Long id, Double price, LocalDate deadline,
-            QuotationStatus status, Product product,
-            Merchant merchant, Provider provider) {
-
+    public Quotation(
+            Long id, Double price, Product product, Merchant merchant, 
+            Provider provider, LocalDate deadline, QuotationStatus status) {
+        
         this.id = id;
         this.price = price;
-        this.status = status;
         this.product = product;
         this.merchant = merchant;
         this.provider = provider;
         this.deadline = deadline;
+        this.status = status;
     }
 
     public Long getId() {

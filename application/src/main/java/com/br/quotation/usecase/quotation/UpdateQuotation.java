@@ -1,7 +1,6 @@
 package com.br.quotation.usecase.quotation;
 
 import com.br.quotation.entities.Quotation;
-import java.util.Optional;
 
 /**
  *
@@ -9,6 +8,6 @@ import java.util.Optional;
  */
 public interface UpdateQuotation {
     
-    Optional<Quotation> execute(Quotation quotation);
+    void execute(Quotation quotation);
     
 }

@@ -1,7 +1,6 @@
 package com.br.quotation.usecase.quotation.impl;
 
 import javax.inject.Named;
-import java.util.Optional;
 import javax.inject.Inject;
 import com.br.quotation.entities.Quotation;
 import com.br.quotation.repositories.QuotationRepository;
@@ -22,8 +21,8 @@ public class UpdateQuotationImpl implements UpdateQuotation {
     }
 
     @Override
-    public Optional<Quotation> execute(Quotation quotation) {
-        return repository.update(quotation);
+    public void execute(Quotation quotation) {
+        repository.update(quotation);
     }
 
 }
