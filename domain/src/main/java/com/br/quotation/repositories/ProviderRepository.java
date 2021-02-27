@@ -13,9 +13,9 @@ public interface ProviderRepository {
 
     Optional<Provider> find(Long id);
     
-    Provider create(Provider provider);
+    void create(Provider provider);
 
-    Provider update(Provider provider);
+    void update(Provider provider);
 
     Page<Provider> find(PageRequest page);
     

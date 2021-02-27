@@ -8,6 +8,6 @@ import com.br.quotation.entities.Provider;
  */
 public interface UpdateProvider {
     
-    Provider execute(Provider provider);
+    void execute(Provider provider);
     
 }

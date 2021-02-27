@@ -21,8 +21,8 @@ public class CreateProviderImpl implements CreateProvider {
     }
 
     @Override
-    public Provider execute(Provider provider) {
-        return repository.create(provider);
+    public void execute(Provider provider) {
+        repository.create(provider);
     }
 
 }

@@ -13,9 +13,9 @@ public interface MerchantRepository {
 
     Optional<Merchant> find(Long id);
 
-    Merchant create(Merchant merchant);
+    void create(Merchant merchant);
 
-    Merchant update(Merchant merchant);
+    void update(Merchant merchant);
 
     Page<Merchant> find(PageRequest page);
 

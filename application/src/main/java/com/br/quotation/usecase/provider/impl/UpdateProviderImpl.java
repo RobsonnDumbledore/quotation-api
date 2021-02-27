@@ -21,8 +21,8 @@ public class UpdateProviderImpl implements UpdateProvider {
     }
 
     @Override
-    public Provider execute(Provider provider) {
-        return repository.update(provider);
+    public void execute(Provider provider) {
+        repository.update(provider);
     }
 
 }

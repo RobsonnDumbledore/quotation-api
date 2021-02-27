@@ -27,8 +27,6 @@ public class ProviderController {
     private FindProvider findProvider;
     private CreateProvider createProvider;
     private UpdateProvider updateProvider;
-    private FindProviderByCnpj findProviderByCnpj;
-    private FindProviderByEmail findProviderByEmail;
 
     public ProviderController(FindProvider findProvider,
             CreateProvider createProvider,
@@ -39,8 +37,6 @@ public class ProviderController {
         this.findProvider = findProvider;
         this.createProvider = createProvider;
         this.updateProvider = updateProvider;
-        this.findProviderByCnpj = findProviderByCnpj;
-        this.findProviderByEmail = findProviderByEmail;
     }
 
     @PostMapping
@@ -54,18 +50,6 @@ public class ProviderController {
     public void updatePovider(@RequestBody Provider provider) {
         this.updateProvider.execute(provider);
     }
-
-//    @GetMapping
-//    @ResponseStatus(HttpStatus.OK)
-//    public Provider findProviderByEmail(@RequestParam String email) {
-//        return this.findProviderByEmail.execute(email).get();
-//    }
-
-//    @GetMapping
-//    @ResponseStatus(HttpStatus.OK)
-//    public Provider findProviderByCnpj(@RequestParam String cnpj) {
-//        return this.findProviderByCnpj.execute(cnpj).get();
-//    }
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)

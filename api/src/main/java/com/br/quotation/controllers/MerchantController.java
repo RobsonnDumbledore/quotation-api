@@ -32,8 +32,6 @@ public class MerchantController {
     private CreateMerchant createMerchant;
     private UpdateMerchant updateMerchant;
     private FindAllMerchant findAllMerchant;
-    private FindMerchantByCnpj findMerchantByCnpj;
-    private FindMerchantByEmail findMerchantByEmail;
 
     public MerchantController(FindMerchant findMerchant,
             CreateMerchant createMerchant,
@@ -46,8 +44,6 @@ public class MerchantController {
         this.createMerchant = createMerchant;
         this.updateMerchant = updateMerchant;
         this.findAllMerchant = findAllMerchant;
-        this.findMerchantByCnpj = findMerchantByCnpj;
-        this.findMerchantByEmail = findMerchantByEmail;
     }
 
     @PostMapping
@@ -72,18 +68,6 @@ public class MerchantController {
         return this.findAllMerchant.execute(pageRequest);
     }
 
-//    @GetMapping
-//    @ResponseStatus(HttpStatus.OK)
-//    public Merchant findMerchantByEmail(@RequestParam String email) {
-//        return this.findMerchantByEmail.execute(email).get();
-//    }
-
-//    @GetMapping
-//    @ResponseStatus(HttpStatus.OK)
-//    public Merchant findMerchantByCnpj(@RequestParam String cnpj) {
-//        return this.findMerchantByCnpj.execute(cnpj).get();
-//    }
-    
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
     public Merchant findMerchant(@PathVariable("id") Long merchantID) {

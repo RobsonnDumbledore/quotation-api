@@ -21,7 +21,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class JdbcMerchantRepository implements MerchantRepository {
 
-    
     private JdbcTemplate jdbcTemplate;
     private MerchantExtractor merchantExtractor;
 
@@ -43,30 +42,29 @@ public class JdbcMerchantRepository implements MerchantRepository {
         return this.jdbcTemplate.query(statement.toString(), new Long[]{id},
                 merchantExtractor).stream().findFirst();
     }
-    
 
     @Override
-    public Merchant create(Merchant merchant) {
-        String statement = "INSERT INTO customers VALUES (?, ?, ?, ?, ?)";
+    public void create(Merchant merchant) {
+        String statement = "INSERT INTO merchant(name, cnpj, email, active) VALUES (?, ?, ?, ?)";
 
         this.jdbcTemplate.update(
-                statement, merchant.getId(), merchant.getName(),
-                merchant.getCnpj(), merchant.getEmail(), merchant.getActive());
+                statement, merchant.getName(), merchant.getCnpj(),
+                merchant.getEmail(), merchant.getActive());
 
-        return find(merchant.getId()).get();
     }
 
     @Override
-    public Merchant update(Merchant merchant) {
+    public void update(Merchant merchant) {
         String statement = "UPDATE merchant SET name = ?, cnpj = ?, email = ?, active = ? WHERE id = ?";
         this.jdbcTemplate.update(
                 statement,
                 merchant.getName(),
                 merchant.getCnpj(),
                 merchant.getEmail(),
-                merchant.getActive()
+                merchant.getActive(),
+                merchant.getId()
         );
-        return find(merchant.getId()).get();
+        
     }
 
     @Override

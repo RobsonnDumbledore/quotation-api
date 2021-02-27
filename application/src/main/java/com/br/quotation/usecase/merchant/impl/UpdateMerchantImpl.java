@@ -21,8 +21,8 @@ public class UpdateMerchantImpl implements UpdateMerchant {
     }
 
     @Override
-    public Merchant execute(Merchant merchant) {
-        return repository.update(merchant);
+    public void execute(Merchant merchant) {
+        repository.update(merchant);
     }
 
 }

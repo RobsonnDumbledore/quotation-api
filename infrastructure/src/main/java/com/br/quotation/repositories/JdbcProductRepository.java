@@ -9,9 +9,9 @@ import com.br.quotation.utilities.Page;
 import com.br.quotation.entities.Product;
 import static java.util.Collections.emptyList;
 import com.br.quotation.utilities.PageRequest;
+import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.br.quotation.extractor.ProductExtractor;
-import org.springframework.stereotype.Repository;
 
 /**
  *
@@ -43,7 +43,7 @@ public class JdbcProductRepository implements ProductRepository {
 
     @Override
     public Page<Product> find(PageRequest page) {
-        
+
         StringBuilder statement = new StringBuilder(BASE_QUERY)
                 .append(" LIMIT ?")
                 .append(" OFFSET ?");

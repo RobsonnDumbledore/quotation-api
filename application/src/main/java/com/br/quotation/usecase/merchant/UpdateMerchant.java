@@ -8,5 +8,5 @@ import com.br.quotation.entities.Merchant;
  */
 public interface UpdateMerchant {
 
-    Merchant execute(Merchant merchant);
+    void execute(Merchant merchant);
 }

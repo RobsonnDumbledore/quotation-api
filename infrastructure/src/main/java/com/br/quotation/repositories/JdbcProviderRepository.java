@@ -10,9 +10,9 @@ import com.br.quotation.utilities.Page;
 import com.br.quotation.entities.Provider;
 import static java.util.Collections.emptyList;
 import com.br.quotation.utilities.PageRequest;
+import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.br.quotation.extractor.ProviderExtractor;
-import org.springframework.stereotype.Repository;
 
 /**
  *
@@ -44,27 +44,27 @@ public class JdbcProviderRepository implements ProviderRepository {
     }
 
     @Override
-    public Provider create(Provider provider) {
-        String statement = "INSERT INTO customers VALUES (?, ?, ?, ?, ?)";
+    public void create(Provider provider) {
+        String statement = "INSERT INTO provider(name, cnpj, email, active) VALUES (?, ?, ?, ?)";
 
         this.jdbcTemplate.update(
                 statement, provider.getId(), provider.getName(),
                 provider.getCnpj(), provider.getEmail(), provider.getActive());
 
-        return find(provider.getId()).get();
     }
 
     @Override
-    public Provider update(Provider provider) {
+    public void update(Provider provider) {
         String statement = "UPDATE provider SET name = ?, cnpj = ?, email = ?, active = ? WHERE id = ?";
         this.jdbcTemplate.update(
                 statement,
                 provider.getName(),
                 provider.getCnpj(),
                 provider.getEmail(),
-                provider.getActive()
+                provider.getActive(),
+                provider.getId()
         );
-        return find(provider.getId()).get();
+
     }
 
     @Override

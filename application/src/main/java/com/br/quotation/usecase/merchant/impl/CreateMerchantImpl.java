@@ -1,10 +1,10 @@
 package com.br.quotation.usecase.merchant.impl;
 
+import javax.inject.Named;
+import javax.inject.Inject;
 import com.br.quotation.entities.Merchant;
 import com.br.quotation.repositories.MerchantRepository;
-import javax.inject.Named;
 import com.br.quotation.usecase.merchant.CreateMerchant;
-import javax.inject.Inject;
 
 /**
  *
@@ -12,7 +12,7 @@ import javax.inject.Inject;
  */
 @Named
 public class CreateMerchantImpl implements CreateMerchant {
-    
+
     private MerchantRepository repository;
 
     @Inject
@@ -21,8 +21,8 @@ public class CreateMerchantImpl implements CreateMerchant {
     }
 
     @Override
-    public Merchant execute(Merchant merchant) {
-        return repository.create(merchant);
+    public void execute(Merchant merchant) {
+        repository.create(merchant);
     }
 
 }
