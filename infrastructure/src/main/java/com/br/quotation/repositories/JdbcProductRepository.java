@@ -11,11 +11,13 @@ import static java.util.Collections.emptyList;
 import com.br.quotation.utilities.PageRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.br.quotation.extractor.ProductExtractor;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Robson
  */
+@Repository
 public class JdbcProductRepository implements ProductRepository {
 
     private JdbcTemplate jdbcTemplate;
@@ -28,7 +30,7 @@ public class JdbcProductRepository implements ProductRepository {
         this.productExtractor = productExtractor;
     }
 
-    private static final String BASE_QUERY = "SELECT id, name";
+    private static final String BASE_QUERY = "SELECT id, name FROM product";
 
     @Override
     public Optional<Product> find(Long id) {

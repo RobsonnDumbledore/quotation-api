@@ -12,7 +12,12 @@
         <dependency>
             <groupId>com.br.quotation</groupId>
             <artifactId>application</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.br.quotation</groupId>
+            <artifactId>infrastructure</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -8,8 +8,9 @@ import com.br.quotation.utilities.PageResponse;
  *
  * @author Robson
  */
-public interface FindAllQuotation {
+public interface FindQuotation {
 
-    PageResponse<Quotation> execute(Long providerID, Long merchantID, PageRequest pageRequest);
+    PageResponse<Quotation> execute(Long providerID, 
+            Long merchantID, PageRequest pageRequest);
 
 }

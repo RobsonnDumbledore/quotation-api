@@ -54,15 +54,12 @@ public class Page<T> {
     }
 
     public Boolean isLast() {
-        return this.pageNumber + 1 >= this.totalPages();
+        return this.pageNumber >= this.totalPages();
     }
 
     public Integer totalPages() {
-        if (this.content.isEmpty() && this.total == 0) {
-            return 1;
-        } else {
-            return Double.valueOf(Math.ceil(this.total / this.pageSize)).intValue();
-        }
+        return (this.total % this.pageSize) == 0 ?
+                (this.total / this.pageSize) : this.total / this.pageSize + 1;
     }
 
     public Integer size() {

@@ -15,4 +15,8 @@ public class Merchant extends Company {
         super(id, name, cnpj, email, active);
     }
 
+    public Merchant(Long id, String name) {
+        super(id, name);
+    }
+
 }

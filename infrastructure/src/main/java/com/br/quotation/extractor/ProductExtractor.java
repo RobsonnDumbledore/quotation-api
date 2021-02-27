@@ -7,11 +7,13 @@ import java.sql.SQLException;
 import com.br.quotation.entities.Product;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Robson
  */
+@Component
 public class ProductExtractor implements ResultSetExtractor<Set<Product>> {
 
     @Override

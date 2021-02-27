@@ -1,9 +1,13 @@
 package com.br.quotation.entities;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 /**
  *
  * @author Robson
  */
+@JsonInclude(Include.NON_NULL)
 public abstract class Company {
 
     private Long id;
@@ -23,6 +27,12 @@ public abstract class Company {
         this.cnpj = cnpj;
         this.email = email;
         this.active = active;
+    }
+
+    public Company(Long id, String name) {
+
+        this.id = id;
+        this.name = name;
     }
 
     public Long getId() {

@@ -6,20 +6,20 @@ import com.br.quotation.utilities.Page;
 import com.br.quotation.entities.Quotation;
 import com.br.quotation.utilities.PageRequest;
 import com.br.quotation.utilities.PageResponse;
+import com.br.quotation.usecase.quotation.FindQuotation;
 import com.br.quotation.repositories.QuotationRepository;
-import com.br.quotation.usecase.quotation.FindAllQuotation;
 
 /**
  *
  * @author Robson
  */
 @Named
-public class FindAllQuotationImpl implements FindAllQuotation {
+public class FindQuotationImpl implements FindQuotation {
 
     private QuotationRepository repository;
 
     @Inject
-    public FindAllQuotationImpl(QuotationRepository repository) {
+    public FindQuotationImpl(QuotationRepository repository) {
         this.repository = repository;
     }
 

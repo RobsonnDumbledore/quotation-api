@@ -72,17 +72,17 @@ public class MerchantController {
         return this.findAllMerchant.execute(pageRequest);
     }
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public Merchant findMerchantByEmail(@RequestParam String email) {
-        return this.findMerchantByEmail.execute(email).get();
-    }
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public Merchant findMerchantByEmail(@RequestParam String email) {
+//        return this.findMerchantByEmail.execute(email).get();
+//    }
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public Merchant findMerchantByCnpj(@RequestParam String cnpj) {
-        return this.findMerchantByCnpj.execute(cnpj).get();
-    }
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public Merchant findMerchantByCnpj(@RequestParam String cnpj) {
+//        return this.findMerchantByCnpj.execute(cnpj).get();
+//    }
     
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)

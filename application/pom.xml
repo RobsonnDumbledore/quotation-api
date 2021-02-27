@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.br.quotation</groupId>
             <artifactId>domain</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.inject</groupId>

@@ -8,7 +8,7 @@
     <modules>
         <module>domain</module>
         <module>application</module>
-        <module>infraestructure</module>
+        <module>infrastructure</module>
         <module>web</module>
         <module>api</module>
     </modules>

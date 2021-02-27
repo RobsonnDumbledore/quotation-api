@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import com.br.quotation.usecase.provider.FindProviderByCnpj;
 import org.springframework.web.bind.annotation.PathVariable;
 import com.br.quotation.usecase.provider.FindProviderByEmail;
@@ -56,17 +55,17 @@ public class ProviderController {
         this.updateProvider.execute(provider);
     }
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public Provider findProviderByEmail(@RequestParam String email) {
-        return this.findProviderByEmail.execute(email).get();
-    }
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public Provider findProviderByEmail(@RequestParam String email) {
+//        return this.findProviderByEmail.execute(email).get();
+//    }
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public Provider findProviderByCnpj(@RequestParam String cnpj) {
-        return this.findProviderByCnpj.execute(cnpj).get();
-    }
+//    @GetMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public Provider findProviderByCnpj(@RequestParam String cnpj) {
+//        return this.findProviderByCnpj.execute(cnpj).get();
+//    }
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)

@@ -12,11 +12,13 @@ import static java.util.Collections.emptyList;
 import com.br.quotation.utilities.PageRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.br.quotation.extractor.ProviderExtractor;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Robson
  */
+@Repository
 public class JdbcProviderRepository implements ProviderRepository {
 
     private final JdbcTemplate jdbcTemplate;
@@ -30,7 +32,7 @@ public class JdbcProviderRepository implements ProviderRepository {
         this.providerExtractor = providerExtractor;
     }
 
-    private static final String BASE_QUERY = "SELECT id, name, cnpj, email, active";
+    private static final String BASE_QUERY = "SELECT id, name, cnpj, email, active FROM provider";
 
     @Override
     public Optional<Provider> find(Long id) {

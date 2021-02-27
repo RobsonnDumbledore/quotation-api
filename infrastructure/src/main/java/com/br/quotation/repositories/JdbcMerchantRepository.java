@@ -12,11 +12,13 @@ import com.br.quotation.utilities.PageRequest;
 import static java.util.Collections.emptyList;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.br.quotation.extractor.MerchantExtractor;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Robson
  */
+@Repository
 public class JdbcMerchantRepository implements MerchantRepository {
 
     
@@ -31,7 +33,7 @@ public class JdbcMerchantRepository implements MerchantRepository {
         this.merchantExtractor = merchantExtractor;
     }
 
-    private static final String BASE_QUERY = "SELECT id, name, cnpj, email, active";
+    private static final String BASE_QUERY = "SELECT id, name, cnpj, email, active FROM merchant";
 
     @Override
     public Optional<Merchant> find(Long id) {
